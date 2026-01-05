@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>student internship portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="navbar">
+        <h1 class="logo">Internship portal</h1>
+        <nav>
+            <a href="index.html">home</a>
+            <a href="internships.html">internships</a>
+            <a href="dashboard.html">dashboard</a>
+            <a href="apply.html" class="btn">apply now</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h2>find the best internship for the student</h2>
+        <p>apply to top internships and kickstart your career.</p>
+        <a href="internships.html" class="btn primary-btn">browse internships</a>
+    </section>
+
+    <section class="categories">
+        <h2>popular categories</h2>
+        <div class="category-container">
+            <div class="category-card">frontend development</div>
+            <div class="category-card">backend development</div>
+            <div class="category-card">UI/UX Design</div>
+            <div class="category-card">Data science</div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <h2>ready to apply?</h2>
+        <p>create your profile and start applying today.</p>
+        <a href="apply.html" class="btn secondary-btn">get started</a>
+    </section>
+
+    <footer>
+        <p>© 2026 Student Internship Portal. All rights reserved.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+
+
+    
+</body>
+</html>
+
+==>css code<==
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-color:  #f5f7fb;
+    color:  #333;
+    line-height: 1.6;
+
+}
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+    padding: 15px 60px;
+    background-color: #ffffff;
+     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.logo{
+    color:  #2563eb;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navbar nav a{
+    margin-left: 20px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+.navbar nav a:hover{
+    color: #2563eb;
+}
+
+.btn{
+    padding:8px 16px;
+    border-radius: 6px;
+    background-color: #2563eb;
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+
+}
+
+.btn:hover{
+     background-color: #1e40af;
+}
+
+.primary-btn{
+    font-size: 16px;
+    padding:12px 24px
+}
+
+.secondary-btn {
+    background-color: #16a34a;
+}
+.hero{
+    text-align: center;
+    padding: 80px 20 px;
+    background-color: linear-gradient(135deg, #2563eb, #1e3a8a);
+    color: rgb(40, 36, 36);
+}
+
+.hero h2{
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.hero p{
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.categories{
+    padding: 60px 40px;
+    text-align: center;
+}
+
+.categories h2{
+    font-size: 28px;
+    margin-bottom: 30px;
+
+}
+
+.category-container{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+
+}
+
+.category-card{
+    background-color: #ffffff;
+    padding:25px;
+    width:220px;
+    border-radius: 10px;
+    font-weight: 600;
+     box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+     transition: transform 0.3s;    
+}
+
+.category-card:hover{
+    transform: translatey(-5px);
+}
+
+.cta{
+    background-color:#ffffff;
+    padding:60px 20px;
+    text-align: center;
+}
+
+.cta h2{
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.cta p {
+    margin-bottom: 25px;
+    color: #555;
+}
+
+footer{
+    background-color: #1e293b ;
+    color: #ffffff;
+    text-align:center;
+    padding: 15px;
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .navbar nav {
+        margin-top: 10px;
+    }
+
+    .hero h2 {
+        font-size: 28px;
+    }
+
+    .category-card {
+        width: 90%;
+    }
+}
+
+==> js code <==
+document.querySelector(".primary-btn")
+  .addEventListener("click", () => {
+    alert("Welcome to Internship Portal!");
+});
+
+const internships = [
+  { role: "Frontend Developer", company: "Google", location: "Remote" },
+  { role: "Backend Developer", company: "Amazon", location: "Bangalore" }
+];
+
+
